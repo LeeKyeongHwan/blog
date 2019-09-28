@@ -44,7 +44,7 @@ social:
 # 填入百度/谷歌的[ analytics id ]
 # baidu_analytics:
  #636802045446222199ae541e32c8133e 
-google_analytics: 
+google_analytics: UA-90320470-2
 
 # comment
 # 评论系统
