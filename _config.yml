@@ -80,3 +80,7 @@ theme: nayo
 deploy:
   type: git
   repo: https://github.com/LeeKyeongHwan/leekyeonghwan.github.io
+
+search:
+  path: search.xml
+  field: post
