@@ -7,7 +7,7 @@ tags: [JavaScript]
 자바스크립트에서 `this`는 호출되는 방식에 따라 달라지기 때문에, 이해하기 너무 어렵다.  
 그래서 아예 대표적인 몇 가지를 그냥 외워버리기로 했다.
 
-1. 자유함수 호출
+1. 자유함수 호출  
   가장 기본적인 경우, 별다른 조건이 없을 때에 *this*는 전역객체를 바라본다.
 
   ```javascript
@@ -22,7 +22,7 @@ tags: [JavaScript]
   > browser의 전역객체는 window
   > node의 전역객체는 global
 
-2. 생성자 호출
+2. 생성자 호출  
   *new* 키워드를 이용한 생성자 호출시에 함수 내부 *this*는 새로운 객체를 바라본다.
 
   ```javascript
@@ -43,7 +43,7 @@ tags: [JavaScript]
   console.log(fun2.name) // Uncaught TypeError: Cannot read property 'name' of undefined
   ```
 
-3. Object의 Method 호출
+3. Object의 Method 호출  
   Object의 Method를 호출했을 때엔 *this*는 Object를 가리킨다.
 
   ```javascript
@@ -73,7 +73,7 @@ tags: [JavaScript]
   car.getArrow()
   ```
 
-4. Arrow Function 호출
+4. Arrow Function 호출  
   ES6에서 추가된 Arrow Function의 경우, 생성된 시점의 주변 스코프의 *this*를 갖게된다
 
   ```javascript
@@ -111,3 +111,6 @@ tags: [JavaScript]
   office.getArrow()
   office.getPencil()
   ```
+
+5. call, apply, bind로 함수 호출  
+  TBD
