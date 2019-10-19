@@ -19,7 +19,7 @@ tags: [JavaScript]
   }
   freeFunction()
   ```
-  > browser의 전역객체는 window
+  > browser의 전역객체는 window  
   > node의 전역객체는 global
 
 2. 생성자 호출  
@@ -113,4 +113,28 @@ tags: [JavaScript]
   ```
 
 5. call, apply, bind로 함수 호출  
-  TBD
+  각각 함수를 호출하고, 정의하는 Function의 메소드이다. 첫번째 인자를 통해 this를 변경할 수 있다.
+
+  ```javascript
+  let office = {
+    paper: 100,
+    getPaper () {
+      console.log(this.paper)
+    }
+  }
+
+  let home = {
+    paper: 10
+  }
+
+  office.getPaper() // 100: 일반함수 메소드 호출
+  office.getPaper.call(home) // 10: 해당함수의 this를 home객체로 변경
+  office.getPaper.call(this) // undefined: this가 Window로 변경
+  office.getPaper.call(null) // undefined: this가 지정이 안되어 있으므로, 기본 함수의 this인 Window를 봄
+  office.getPaper.call() // undefined: 상동
+
+  office.getPaper.apply(home) // 10: 해당함수의 this를 home객체로 변경
+
+  let bind = office.getPaper.bind(home)
+  bind() // 10
+  ```
