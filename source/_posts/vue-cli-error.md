@@ -19,3 +19,5 @@ vue.cmd create <project-name>
 위처럼 `.cmd`를 붙여 사용하면 된다고 한다.
 
 혹은 아예 그냥 git bash나 다른 터미널을 이용하면 된다.
+
+[참고, MS powershell docs](https://docs.microsoft.com/ko-kr/powershell/module/microsoft.powershell.core/about/about_execution_policies?view=powershell-6)
